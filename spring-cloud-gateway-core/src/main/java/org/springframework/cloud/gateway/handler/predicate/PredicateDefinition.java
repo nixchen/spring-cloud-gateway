@@ -30,12 +30,19 @@ import org.springframework.validation.annotation.Validated;
 import static org.springframework.util.StringUtils.tokenizeToStringArray;
 
 /**
+ * 谓语定义
  * @author Spencer Gibb
  */
 @Validated
 public class PredicateDefinition {
+	/**
+	 * 谓语定义名字
+	 */
 	@NotNull
 	private String name;
+	/**
+	 * 参数数组
+	 */
 	private Map<String, String> args = new LinkedHashMap<>();
 
 	public PredicateDefinition() {

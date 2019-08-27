@@ -53,6 +53,21 @@
 		<embedded-redis.version>0.6</embedded-redis.version>
 	</properties>
 
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/exec-maven-plugin -->
+		<dependency>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>exec-maven-plugin</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -127,7 +142,7 @@
 		<module>spring-cloud-gateway-core</module>
 		<module>spring-cloud-starter-gateway</module>
 		<module>spring-cloud-gateway-sample</module>
-		<module>docs</module>
+		<module>spring-cloud-gateway-docs</module>
 	</modules>
 
 	<profiles>

@@ -29,12 +29,19 @@ import org.springframework.validation.annotation.Validated;
 import static org.springframework.util.StringUtils.tokenizeToStringArray;
 
 /**
+ * 过滤器定义
  * @author Spencer Gibb
  */
 @Validated
 public class FilterDefinition {
+	/**
+	 * 过滤器定义名字
+	 */
 	@NotNull
 	private String name;
+	/**
+	 * 参数数组
+	 */
 	private Map<String, String> args = new LinkedHashMap<>();
 
 	public FilterDefinition() {

@@ -61,6 +61,11 @@ public interface RoutePredicateFactory<C> extends ShortcutConfigurable, Configur
 
 	default void beforeApply(C config) {}
 
+	/**
+	 * 核心方法，用于生产Predicate
+	 * @param config
+	 * @return
+	 */
 	Predicate<ServerWebExchange> apply(C config);
 
 	default AsyncPredicate<ServerWebExchange> applyAsync(C config) {

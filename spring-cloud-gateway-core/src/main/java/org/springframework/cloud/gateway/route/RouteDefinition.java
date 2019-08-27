@@ -34,23 +34,39 @@ import java.util.UUID;
 import static org.springframework.util.StringUtils.tokenizeToStringArray;
 
 /**
+ * 路由定义，可以转换为Route
  * @author Spencer Gibb
  */
 @Validated
 public class RouteDefinition {
+	/**
+	 * id编号
+	 */
 	@NotEmpty
 	private String id = UUID.randomUUID().toString();
 
+	/**
+	 * 谓语定义数组
+	 */
 	@NotEmpty
 	@Valid
 	private List<PredicateDefinition> predicates = new ArrayList<>();
 
+	/**
+	 * 过滤器定义数组
+	 */
 	@Valid
 	private List<FilterDefinition> filters = new ArrayList<>();
 
+	/**
+	 * 路由向的URI
+	 */
 	@NotNull
 	private URI uri;
 
+	/**
+	 * 顺序。使用顺序小的
+	 */
 	private int order = 0;
 
 	public RouteDefinition() {}
